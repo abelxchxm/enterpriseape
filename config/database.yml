@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: <%= ENV['ENTERPRISE_DATABASE'] %>
+  username: <%= ENV['ENTERPRISE_USER'] %>
+  password: <%= ENV['ENTERPRISE_USER_PASSWORD'] %>
